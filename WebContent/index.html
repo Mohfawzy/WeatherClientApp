@@ -1,0 +1,22 @@
+<html ng-app="weatherApp">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<script data-require="angular.js@*" data-semver="1.5.8"
+	src="assets/js/angular.js"></script>
+<script data-require="angular-route@*" data-semver="1.5.8"
+	src="assets/js/angular-route.js"></script>
+<script src="app/app.module.js"></script>
+<script src="app/app.route.js"></script>
+<script src="app/components/start/startController.js"></script>
+<script src="app/components/weather/weatherController.js"></script>
+<script src="app/components/forecast/forecastController.js"></script>
+</head>
+<body>
+	<center>
+		<h2>Welcome to Weather App</h2>
+		<div>{{error}}</div>
+		<div ng-view></div>
+	</center>
+</body>
+</html>

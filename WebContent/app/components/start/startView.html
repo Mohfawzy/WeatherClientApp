@@ -1,0 +1,8 @@
+<div>
+	<form name="weather">
+		<label> Please enter the Name of the City</label><br/><br/><input
+			type="text" required="" ng-model="cityName" ng-pattern="pattern" /><br /><br />
+		<button ng-disabled="weather.$invalid" ng-click="getWeather()">Weather</button>
+		<button ng-disabled="weather.$invalid" ng-click="getforecast()">Forecast</button>
+	</form>
+</div>

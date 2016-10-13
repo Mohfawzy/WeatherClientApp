@@ -1,0 +1,30 @@
+<div ng-show="forecast">
+	<h1>{{forecast.city.name}},{{forecast.city.country}}</h1>
+	<p>Forecast</p>
+	<table>
+		<thead>
+			<tr>
+				<th>Temperature</th>
+				<th>Max Temperature</th>
+				<th>Minimum Temperature</th>
+				<th>Cloudiness</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="l in forecast.list" >
+				<td align="center">{{l.temp.day |number:1}}&#8451</td>
+				<td align="center">{{l.temp.max |number:1}}&#8451</td>
+				<td align="center">{{l.temp.min |number:1}}&#8451</td>
+				<td align="center">{{l.weather[0].description}}</td>
+				<td><img
+					ng-src="http://openweathermap.org/img/w/{{l.weather[0].icon}}.png"
+					alt="{{l.weather[0].description}}" /></td>
+			</tr>
+		</tbody>
+	</table>
+
+</div>
+<div ng-show="!forecast">
+	<p>No data for the value entered. Please click back and try again</p>
+</div>
+<button ng-click="back()">Back</button>
